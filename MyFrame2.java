@@ -50,6 +50,6 @@ public class MyFrame2 {
 
 		// 3. make the object
 		MyFrame2 obj = new MyFrame2();
+		
 	}
-
 }
