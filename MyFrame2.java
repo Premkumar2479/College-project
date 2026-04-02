@@ -3,7 +3,8 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
-
+import javax.swing.JRadioButton;
+// import javax.swing.JButtongro
 //1. import the class.
 
 public class MyFrame2 {
@@ -13,6 +14,7 @@ public class MyFrame2 {
 	JLabel lblName, lblAddress, lblDesc;
 	JTextField txtName, txtAddress;
 	JTextArea jtaDesc;
+	JRadioButton male,female;
 
 	MyFrame2() {
 		p = new JPanel();
@@ -27,6 +29,11 @@ public class MyFrame2 {
 		lblDesc = new JLabel("Enter Description	");
 		jtaDesc = new JTextArea(4,50);
 
+		male =new JRadioButton("male");
+		female =new JRadioButton("female");
+
+
+
 		p.add(lblName);
 		p.add(txtName);
 		
@@ -35,6 +42,9 @@ public class MyFrame2 {
 
 		p.add(lblDesc);
 		p.add(jtaDesc);
+
+		p.add(male);
+		p.add(female);
 
 		f.add(p);
 		f.setSize(400, 400); // 400px width and size //4.2 size
