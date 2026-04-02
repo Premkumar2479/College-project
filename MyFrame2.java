@@ -5,6 +5,9 @@ import javax.swing.JTextField;
 import javax.swing.JTextArea;
 import javax.swing.JRadioButton;
 import javax.swing.ButtonGroup;
+import javax.swing.JList;
+import javax.swing.DefaultListModel;
+import javax.swing.JComboBox;
 //1. import the class.
 
 public class MyFrame2 {
@@ -16,10 +19,30 @@ public class MyFrame2 {
 	JTextArea jtaDesc;
 	JRadioButton Male,Female;
 	ButtonGroup bg;
+	JList list;
+	DefaultListModel dlim;
+	JComboBox jcb;
 
 	MyFrame2() {
 		p = new JPanel();
 		f = new JFrame();
+
+		jcb=new JComboBox();
+		jcb.addItem("C++");
+		jcb.addItem("Java");
+		jcb.addItem("Python");
+		jcb.addItem("DSA");
+		jcb.addItem("Mongodb");
+
+
+		list = new JList();
+		dlim =new DefaultListModel();
+		dlim.addElement("Patna");
+		dlim.addElement("Ranchi");
+		dlim.addElement("Delhi");
+		dlim.addElement("Dubai");
+		dlim.addElement("Iran");
+		list.setModel(dlim);
 
 		lblName = new JLabel("Enter your name		");
 		txtName = new JTextField(30);
@@ -49,6 +72,10 @@ public class MyFrame2 {
 
 		p.add(Male);
 		p.add(Female);
+
+		p.add(list);
+
+		p.add(jcb);
 
 		f.add(p);
 		f.setSize(400, 400); // 400px width and size //4.2 size
