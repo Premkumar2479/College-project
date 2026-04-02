@@ -4,7 +4,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
 import javax.swing.JRadioButton;
-// import javax.swing.JButtongro
+import javax.swing.ButtonGroup;
 //1. import the class.
 
 public class MyFrame2 {
@@ -14,7 +14,8 @@ public class MyFrame2 {
 	JLabel lblName, lblAddress, lblDesc;
 	JTextField txtName, txtAddress;
 	JTextArea jtaDesc;
-	JRadioButton male,female;
+	JRadioButton Male,Female;
+	ButtonGroup bg;
 
 	MyFrame2() {
 		p = new JPanel();
@@ -29,9 +30,12 @@ public class MyFrame2 {
 		lblDesc = new JLabel("Enter Description	");
 		jtaDesc = new JTextArea(4,50);
 
-		male =new JRadioButton("male");
-		female =new JRadioButton("female");
+		Male =new JRadioButton("male");
+		Female =new JRadioButton("female");
 
+		bg = new ButtonGroup();
+		bg.add(Male);
+		bg.add(Female);
 
 
 		p.add(lblName);
@@ -43,8 +47,8 @@ public class MyFrame2 {
 		p.add(lblDesc);
 		p.add(jtaDesc);
 
-		p.add(male);
-		p.add(female);
+		p.add(Male);
+		p.add(Female);
 
 		f.add(p);
 		f.setSize(400, 400); // 400px width and size //4.2 size
