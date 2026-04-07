@@ -8,6 +8,7 @@ import javax.swing.ButtonGroup;
 import javax.swing.JList;
 import javax.swing.DefaultListModel;
 import javax.swing.JComboBox;
+import javax.swing.JPasswordField;
 //1. import the class.
 
 public class MyFrame2 {
