@@ -9,6 +9,9 @@ import javax.swing.JList;
 import javax.swing.DefaultListModel;
 import javax.swing.JComboBox;
 import javax.swing.JPasswordField;
+import javax.swing.JButton;
+
+
 //1. import the class.
 
 public class MyFrame2 {
@@ -23,11 +26,18 @@ public class MyFrame2 {
 	JList list;
 	DefaultListModel dlim;
 	JComboBox jcb;
+	JButton btnSubmit;
+	JButton btncancel;
+
 
 	MyFrame2() {
 		p = new JPanel();
 		f = new JFrame();
 
+		btnSubmit = new JButton("submit");
+		btncancel = new JButton("cancel");
+
+		
 		jcb=new JComboBox();
 		jcb.addItem("C++");
 		jcb.addItem("Java");
@@ -60,6 +70,9 @@ public class MyFrame2 {
 		bg = new ButtonGroup();
 		bg.add(Male);
 		bg.add(Female);
+
+		p.add(btnSubmit);
+		p.add(btncancel);
 
 
 		p.add(lblName);
